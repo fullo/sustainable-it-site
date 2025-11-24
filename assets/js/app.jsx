@@ -6,7 +6,7 @@ import * as THREE from 'three';
 import { motion } from 'framer-motion';
 import { ArrowDown, Menu, X, Leaf, BookOpen, CheckCircle, Globe, Users, TrendingUp, RefreshCw } from 'lucide-react';
 
-// --- 3D COMPONENTS (Ex QuantumScene) ---
+// --- 3D COMPONENTS ---
 
 const DataNode = ({ position, color, scale = 1 }) => {
   const ref = useRef(null);
@@ -75,7 +75,7 @@ const EcoNetworkScene = () => {
   );
 };
 
-// --- DIAGRAMS (Ex Diagrams.tsx) ---
+// --- DIAGRAMS ---
 
 const TripleBottomLineDiagram = () => {
   const [active, setActive] = useState('planet');
@@ -314,7 +314,7 @@ const CarbonCostDiagram = () => {
     )
 }
 
-// --- MAIN APP COMPONENT (Ex App.tsx) ---
+// --- MAIN APP ---
 
 const AuthorCard = ({ name, role, delay }) => {
   return (
