@@ -1,0 +1,7 @@
+title: Sustainable IT
+description: Il metodo pratico per la sostenibilità digitale
+theme: null
+plugins: []
+baseurl: "" # Lascia vuoto se è un sito root, metti /nome-repo se è una sottocartella
+url: "https://tuo-username.github.io"
+exclude: [node_modules, package.json, package-lock.json, README.md, tsconfig.json, vite.config.ts]

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }}</title>
+    
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              serif: ['"Playfair Display"', 'serif'],
+              sans: ['"Inter"', 'sans-serif'],
+            },
+            colors: {
+              eco: {
+                light: '#ECFDF5',
+                main: '#059669',
+                dark: '#064E3B',
+                accent: '#D97706',
+              },
+              stone: {
+                850: '#1f1f1e',
+              }
+            }
+          }
+        }
+      }
+    </script>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Import Map per i moduli ES -->
+    <script type="importmap">
+    {
+      "imports": {
+        "react": "https://esm.sh/react@18.2.0",
+        "react-dom/client": "https://esm.sh/react-dom@18.2.0/client",
+        "react/jsx-runtime": "https://esm.sh/react@18.2.0/jsx-runtime",
+        "@react-three/fiber": "https://esm.sh/@react-three/fiber@8.15.16?external=react,react-dom,three",
+        "@react-three/drei": "https://esm.sh/@react-three/drei@9.99.0?external=react,react-dom,three,@react-three/fiber",
+        "three": "https://esm.sh/three@0.161.0",
+        "framer-motion": "https://esm.sh/framer-motion@11.0.3?external=react,react-dom",
+        "lucide-react": "https://esm.sh/lucide-react@0.330.0?external=react,react-dom"
+      }
+    }
+    </script>
+
+    <!-- Babel Standalone per compilare JSX nel browser -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    
+    <!-- Stili base -->
+    <style>
+      html { scroll-behavior: smooth; scroll-padding-top: 100px; }
+      body { background-color: #FAFAF9; color: #1C1917; }
+    </style>
+</head>
+<body>
+    {{ content }}
+</body>
+</html>

@@ -1,69 +1,24 @@
-<!DOCTYPE html>
-<html lang="it">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sustainable IT: Il metodo pratico</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            fontFamily: {
-              serif: ['"Playfair Display"', 'serif'],
-              sans: ['"Inter"', 'sans-serif'],
-            },
-            colors: {
-              eco: {
-                light: '#ECFDF5', // emerald-50
-                main: '#059669',  // emerald-600
-                dark: '#064E3B',  // emerald-900
-                accent: '#D97706', // amber-600 (for Profit/Gold metaphor)
-              },
-              stone: {
-                850: '#1f1f1e',
-              }
-            }
-          }
-        }
-      }
-    </script>
-    <style>
-      html {
-        scroll-behavior: smooth;
-        scroll-padding-top: 100px;
-      }
-      body {
-        background-color: #FAFAF9;
-        color: #1C1917;
-      }
-      @media print {
-        nav, footer, button {
-          display: none !important;
-        }
-      }
-    </style>
-  <script type="importmap">
+<script type="importmap">
 {
   "imports": {
+    "framer-motion": "https://aistudiocdn.com/framer-motion@^12.23.24",
+    "@react-three/fiber": "https://aistudiocdn.com/@react-three/fiber@^9.4.0",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.554.0",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
     "react": "https://aistudiocdn.com/react@^19.2.0",
     "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
-    "react/": "https://aistudiocdn.com/react@^19.2.0/",
-    "@react-three/fiber": "https://aistudiocdn.com/@react-three/fiber@^9.4.0",
     "@react-three/drei": "https://aistudiocdn.com/@react-three/drei@^10.7.7",
-    "three": "https://aistudiocdn.com/three@^0.181.1",
-    "framer-motion": "https://aistudiocdn.com/framer-motion@^12.23.24",
-    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.553.0"
+    "three": "https://aistudiocdn.com/three@^0.181.2"
   }
 }
 </script>
-<link rel="stylesheet" href="/index.css">
-</head>
-  <body>
-    <div id="root"></div>
-  <script type="module" src="/index.tsx"></script>
-</body>
-</html>
+---
+layout: default
+title: Sustainable IT: Il metodo pratico
+---
+
+<div id="root"></div>
+
+<!-- Caricamento Applicazione React -->
+<script type="text/babel" data-type="module" src="assets/js/app.jsx"></script><link rel="stylesheet" href="/index.css">
+<script type="module" src="/index.tsx"></script>
