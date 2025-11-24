@@ -1,3 +1,16 @@
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "@react-three/fiber": "https://aistudiocdn.com/@react-three/fiber@^9.4.0",
+    "@react-three/drei": "https://aistudiocdn.com/@react-three/drei@^10.7.7",
+    "framer-motion": "https://aistudiocdn.com/framer-motion@^12.23.24",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.554.0",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/"
+  }
+}
+</script>
 ---
 layout: default
 title: Sustainable IT: Il metodo pratico
@@ -5,125 +18,126 @@ description: Riduci l'impatto, ottimizza le risorse e guida la trasformazione so
 ---
 
 <!-- Hero Section -->
-<header class="relative h-screen flex items-center justify-center overflow-hidden bg-[#FAFAF9]">
+<header class="hero">
     <!-- React Island: 3D Background -->
-    <div id="island-3d-background" class="absolute inset-0 z-0 opacity-40 pointer-events-none"></div>
+    <div id="island-3d-background" style="position: absolute; inset: 0; z-index: 0; opacity: 0.4; pointer-events: none;"></div>
     
-    <!-- Gradient Overlay -->
-    <div class="absolute inset-0 z-0 pointer-events-none bg-[radial-gradient(circle_at_center,rgba(250,250,249,0.85)_0%,rgba(250,250,249,0.5)_50%,rgba(250,250,249,0.2)_100%)]"></div>
+    <div class="hero-overlay"></div>
 
-    <div class="relative z-10 container mx-auto px-6 text-center mt-12 animate-fade-in-up">
-        <div class="inline-block mb-6 px-4 py-1.5 border border-emerald-600/30 text-emerald-800 text-xs tracking-[0.2em] uppercase font-bold rounded-full backdrop-blur-md bg-white/50">
+    <div class="hero-content">
+        <div class="badge badge-eco" style="margin-bottom: 1.5rem;">
             Il Metodo Pratico
         </div>
-        <h1 class="font-serif text-5xl md:text-7xl lg:text-8xl font-medium leading-tight mb-6 text-stone-900 drop-shadow-sm">
+        <h1 class="hero-title">
             Sustainable IT <br/>
-            <span class="italic font-light text-stone-600 text-3xl md:text-5xl block mt-2">Riduci l'impatto. Ottimizza le risorse.</span>
+            <span class="hero-subtitle">Riduci l'impatto. Ottimizza le risorse.</span>
         </h1>
-        <p class="max-w-2xl mx-auto text-lg md:text-xl text-stone-600 font-light leading-relaxed mb-10">
+        <p class="hero-desc">
             Una guida completa per guidare la trasformazione digitale sostenibile. Framework pratici, metriche reali e risultati guidati dal business.
         </p>
         
-        <div class="flex flex-col md:flex-row justify-center gap-4">
-            <a href="#introduction" class="px-8 py-3 bg-stone-900 text-white rounded-full hover:bg-emerald-900 transition-all shadow-lg hover:shadow-xl text-sm font-bold tracking-wide">
+        <div class="hero-actions">
+            <a href="#introduction" class="btn btn-primary">
                 INIZIA A LEGGERE
             </a>
-            <a href="https://leanpub.com/sustainable-it" target="_blank" class="px-8 py-3 bg-white text-stone-900 border border-stone-200 rounded-full hover:border-emerald-600 transition-all shadow-sm hover:shadow-md text-sm font-bold tracking-wide flex items-center justify-center gap-2">
+            <a href="https://leanpub.com/sustainable-it" target="_blank" class="btn btn-outline">
                 COMPRA SU LEANPUB
             </a>
         </div>
     </div>
     
-    <div class="absolute bottom-8 left-0 right-0 flex justify-center animate-bounce">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-stone-400"><path d="M12 5v14"/><path d="m19 12-7 7-7-7"/></svg>
+    <div class="scroll-indicator">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14"/><path d="m19 12-7 7-7-7"/></svg>
     </div>
 </header>
 
 <main>
     <!-- Introduction -->
     <section id="introduction" class="py-24 bg-white">
-        <div class="container mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-12 gap-16 items-center">
-            <div class="md:col-span-5">
-                <div class="relative rounded-2xl overflow-hidden shadow-2xl aspect-[4/5] border border-stone-100 group">
-                    <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=1000" alt="Terra digitale" class="object-cover w-full h-full opacity-90 transition-transform duration-700 group-hover:scale-105">
-                    <div class="absolute inset-0 bg-gradient-to-t from-stone-900/80 to-transparent flex items-end p-8">
-                        <p class="text-white font-serif italic text-xl">"Il software sta inquinando più degli aerei."</p>
+        <div class="container">
+            <div class="intro-grid">
+                <div>
+                    <div class="intro-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=1000" alt="Terra digitale" class="intro-image">
+                        <div class="intro-quote">"Il software sta inquinando più degli aerei."</div>
                     </div>
                 </div>
-            </div>
-            <div class="md:col-span-7">
-                <div class="inline-block mb-3 text-xs font-bold tracking-widest text-emerald-600 uppercase">UN PROBLEMA DI BUSINESS</div>
-                <h2 class="font-serif text-4xl md:text-5xl mb-6 leading-tight text-stone-900">Sostenibilità è Efficienza</h2>
-                <div class="w-16 h-1 bg-emerald-600 mb-8"></div>
-                
-                <div class="text-lg text-stone-600 leading-relaxed space-y-6">
-                    <p><span class="text-5xl float-left mr-3 mt-[-8px] font-serif text-emerald-600">L</span>a maggior parte delle iniziative di sostenibilità IT fallisce perché viene trattata come beneficenza, non come strategia. Ma lo spreco di risorse digitali—cloud sovradimensionato, server zombie, codice inefficiente—è anche uno spreco di denaro.</p>
-                    <p>Il framework del <strong>Triple Bottom Line</strong> dimostra che non devi scegliere tra il pianeta e il profitto. Ottimizzando per la sostenibilità, ottimizzi per le performance, l'esperienza utente e i costi.</p>
+                <div>
+                    <span class="section-eyebrow">UN PROBLEMA DI BUSINESS</span>
+                    <h2 class="section-title">Sostenibilità è Efficienza</h2>
+                    <div class="separator"></div>
                     
-                    <ul class="space-y-3 mt-4">
-                        <li class="flex items-center gap-3 text-stone-700 font-medium">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-emerald-600"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-                            Bollette cloud ridotte del 30%+
-                        </li>
-                        <li class="flex items-center gap-3 text-stone-700 font-medium">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-emerald-600"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-                            Migliore retention dei talenti
-                        </li>
-                        <li class="flex items-center gap-3 text-stone-700 font-medium">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-emerald-600"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-                            Pronti per la conformità normativa (CSRD)
-                        </li>
-                        <li class="flex items-center gap-3 text-stone-700 font-medium">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-emerald-600"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-                            Performance & Accessibilità potenziate
-                        </li>
-                    </ul>
+                    <div class="intro-text">
+                        <p><span class="dropcap">L</span>a maggior parte delle iniziative di sostenibilità IT fallisce perché viene trattata come beneficenza, non come strategia. Ma lo spreco di risorse digitali—cloud sovradimensionato, server zombie, codice inefficiente—è anche uno spreco di denaro.</p>
+                        <p>Il framework del <strong>Triple Bottom Line</strong> dimostra che non devi scegliere tra il pianeta e il profitto. Ottimizzando per la sostenibilità, ottimizzi per le performance, l'esperienza utente e i costi.</p>
+                        
+                        <ul class="check-list">
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--color-primary)"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                                Bollette cloud ridotte del 30%+
+                            </li>
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--color-primary)"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                                Migliore retention dei talenti
+                            </li>
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--color-primary)"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                                Pronti per la conformità normativa (CSRD)
+                            </li>
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--color-primary)"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                                Performance & Accessibilità potenziate
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- React Island: Diagrams -->
-    <section class="py-16 bg-stone-50 border-y border-stone-200">
-        <div id="island-diagram-tbl" class="container mx-auto px-6 flex flex-col items-center"></div>
+    <section class="py-24 bg-stone-50">
+        <div class="container" style="display: flex; flex-direction: column; align-items: center;">
+            <div id="island-diagram-tbl"></div>
+        </div>
     </section>
 
     <!-- Framework -->
     <section id="framework" class="py-24 bg-white">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <div class="inline-block mb-3 text-xs font-bold tracking-widest text-stone-500 uppercase">METODOLOGIA</div>
-                <h2 class="font-serif text-4xl md:text-5xl mb-6 text-stone-900">Il Framework SOFT</h2>
-                <p class="text-lg text-stone-600 max-w-2xl mx-auto">
+        <div class="container">
+            <div class="text-center" style="margin-bottom: 4rem;">
+                <span class="section-eyebrow">METODOLOGIA</span>
+                <h2 class="section-title">Il Framework SOFT</h2>
+                <p style="max-w: 700px; margin: 0 auto; color: var(--color-text-muted);">
                     Un approccio strutturato per trasformare la tua organizzazione. Passare dalla "consapevolezza" all' "esecuzione" richiede governance, strumenti e cultura.
                 </p>
             </div>
 
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-                <div class="lg:col-span-7">
+            <div class="framework-grid">
+                <div>
                     <!-- React Island: SOFT Diagram -->
                     <div id="island-diagram-soft"></div>
                 </div>
-                <div class="lg:col-span-5 space-y-8">
-                    <article class="flex gap-4 group">
-                        <div class="w-10 h-10 rounded-full bg-stone-100 flex items-center justify-center text-stone-900 font-bold border border-stone-200 shrink-0 group-hover:bg-emerald-100 group-hover:border-emerald-200 transition-colors">1</div>
+                <div>
+                    <article class="step-card">
+                        <div class="step-num">1</div>
                         <div>
-                            <h4 class="font-bold text-lg mb-2">Strategia & Governance</h4>
-                            <p class="text-stone-600 text-sm">Definisci OKR che contano. Costruisci un comitato "GreenOps". Ferma la tragedia dei beni comuni.</p>
+                            <h4 class="step-title">Strategia & Governance</h4>
+                            <p class="step-desc">Definisci OKR che contano. Costruisci un comitato "GreenOps". Ferma la tragedia dei beni comuni.</p>
                         </div>
                     </article>
-                    <article class="flex gap-4 group">
-                        <div class="w-10 h-10 rounded-full bg-stone-100 flex items-center justify-center text-stone-900 font-bold border border-stone-200 shrink-0 group-hover:bg-emerald-100 group-hover:border-emerald-200 transition-colors">2</div>
+                    <article class="step-card">
+                        <div class="step-num">2</div>
                         <div>
-                            <h4 class="font-bold text-lg mb-2">Implementazione</h4>
-                            <p class="text-stone-600 text-sm">Shift-left. Principi di Green Coding. Integrazione CI/CD. Misura il carbonio come misuri i bug.</p>
+                            <h4 class="step-title">Implementazione</h4>
+                            <p class="step-desc">Shift-left. Principi di Green Coding. Integrazione CI/CD. Misura il carbonio come misuri i bug.</p>
                         </div>
                     </article>
-                    <article class="flex gap-4 group">
-                        <div class="w-10 h-10 rounded-full bg-stone-100 flex items-center justify-center text-stone-900 font-bold border border-stone-200 shrink-0 group-hover:bg-emerald-100 group-hover:border-emerald-200 transition-colors">3</div>
+                    <article class="step-card">
+                        <div class="step-num">3</div>
                         <div>
-                            <h4 class="font-bold text-lg mb-2">Operazioni & Misurazione</h4>
-                            <p class="text-stone-600 text-sm">Usa metriche standard (SCI, TCS). Monitora l'energia in tempo reale. Ottimizza i cicli di vita dell'hardware.</p>
+                            <h4 class="step-title">Operazioni & Misurazione</h4>
+                            <p class="step-desc">Usa metriche standard (SCI, TCS). Monitora l'energia in tempo reale. Ottimizza i cicli di vita dell'hardware.</p>
                         </div>
                     </article>
                 </div>
@@ -132,62 +146,57 @@ description: Riduci l'impatto, ottimizza le risorse e guida la trasformazione so
     </section>
 
     <!-- Impact -->
-    <section id="impact" class="py-24 bg-stone-900 text-stone-100 overflow-hidden relative">
-        <div class="absolute top-0 left-0 w-full h-full opacity-20 pointer-events-none">
-            <div class="w-96 h-96 rounded-full bg-emerald-600 blur-[150px] absolute top-[-100px] left-[-100px]"></div>
-            <div class="w-96 h-96 rounded-full bg-amber-600 blur-[150px] absolute bottom-[-100px] right-[-100px]"></div>
-        </div>
+    <section id="impact" class="impact-section">
+        <div style="position: absolute; top:0; left:0; width:100%; height:100%; opacity:0.1; pointer-events:none; background: radial-gradient(circle at top right, #059669, transparent 40%);"></div>
 
-        <div class="container mx-auto px-6 relative z-10">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-                <div class="order-2 lg:order-1 relative flex justify-center">
-                    <div class="w-full max-w-[480px] bg-white rounded-xl overflow-hidden shadow-2xl border border-stone-700">
-                        <iframe src="https://sustainableitc.substack.com/embed" width="480" height="320" style="border:none; background:white;" frameborder="0" scrolling="no" class="w-full"></iframe>
-                    </div>
+        <div class="container impact-grid">
+            <div class="impact-visual">
+                <div class="impact-iframe-wrapper">
+                    <iframe src="https://sustainableitc.substack.com/embed" width="480" height="320" style="border:none; background:white;" frameborder="0" scrolling="no" style="width: 100%;"></iframe>
                 </div>
-                <div class="order-1 lg:order-2">
-                    <div class="inline-flex items-center gap-2 px-3 py-1 bg-stone-800 text-emerald-500 text-xs font-bold tracking-widest uppercase rounded-full mb-6 border border-stone-700">
-                        RISULTATI REALI
-                    </div>
-                    <h2 class="font-serif text-4xl md:text-5xl mb-6 text-white">Il Paradosso della Crescita</h2>
-                    <p class="text-lg text-stone-400 mb-8 leading-relaxed">
-                        Tradizionalmente, quando le aziende crescono, la loro impronta IT esplode. L'IT Sostenibile rompe questa correlazione. Disaccoppiando la crescita dal consumo, crei un'infrastruttura resiliente e antifragile.
-                    </p>
-                    <!-- React Island: Carbon Chart -->
-                    <div id="island-diagram-cost"></div>
+            </div>
+            <div class="impact-content">
+                <div class="badge badge-dark" style="margin-bottom: 1.5rem; color: var(--color-primary);">
+                    RISULTATI REALI
                 </div>
+                <h2 class="section-title" style="color: white;">Il Paradosso della Crescita</h2>
+                <p class="impact-text">
+                    Tradizionalmente, quando le aziende crescono, la loro impronta IT esplode. L'IT Sostenibile rompe questa correlazione. Disaccoppiando la crescita dal consumo, crei un'infrastruttura resiliente e antifragile.
+                </p>
+                <!-- React Island: Carbon Chart -->
+                <div id="island-diagram-cost"></div>
             </div>
         </div>
     </section>
 
     <!-- Author -->
-    <section id="author" class="py-24 bg-[#FAFAF9] border-t border-stone-200">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-12">
-                <h2 class="font-serif text-3xl md:text-4xl mb-4 text-stone-900">L'Autore</h2>
+    <section id="author" class="py-24 bg-stone-50">
+        <div class="container">
+            <div class="text-center" style="margin-bottom: 3rem;">
+                <h2 class="section-title">L'Autore</h2>
             </div>
             
-            <div class="flex justify-center">
-                <article class="flex flex-col items-center p-8 bg-white rounded-xl border border-stone-200 shadow-sm hover:shadow-lg transition-all duration-300 w-full max-w-sm hover:border-emerald-200">
-                    <div class="w-24 h-24 bg-stone-100 rounded-full mb-6 flex items-center justify-center overflow-hidden">
-                        <img src="https://media.licdn.com/dms/image/v2/C4D03AQF6pppYBQqNIw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1634652159502?e=1765411200&v=beta&t=qgzs1dUzJQYb4V0OKJJCh_MniWJQLnTSN2JjMfD73kM" alt="Francesco Fullone" class="w-full h-full object-cover">
+            <div style="display: flex; justify-content: center;">
+                <article class="author-card">
+                    <div style="display: flex; justify-content: center;">
+                        <img src="https://media.licdn.com/dms/image/v2/C4D03AQF6pppYBQqNIw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1634652159502?e=1765411200&v=beta&t=qgzs1dUzJQYb4V0OKJJCh_MniWJQLnTSN2JjMfD73kM" alt="Francesco Fullone" class="author-img">
                     </div>
-                    <h3 class="font-serif text-2xl text-stone-900 text-center mb-2">Francesco Fullone</h3>
-                    <p class="text-sm text-emerald-600 font-bold uppercase tracking-widest text-center mb-4">Autore & Tech Leader</p>
-                    <blockquote class="text-stone-600 text-center text-sm leading-relaxed italic">
+                    <h3 class="author-name">Francesco Fullone</h3>
+                    <p class="author-role">Autore & Tech Leader</p>
+                    <blockquote class="author-bio">
                         "La più grande minaccia per il nostro pianeta è la convinzione che qualcun altro lo salverà."
                     </blockquote>
                 </article>
             </div>
             
-            <div class="max-w-2xl mx-auto mt-12 text-center">
-                <p class="text-stone-600 mb-8">
+            <div style="max-width: 600px; margin: 3rem auto 0; text-align: center;">
+                <p style="color: var(--color-text-muted); margin-bottom: 2rem;">
                     Questo libro è il risultato di anni di workshop, consulenze e implementazioni nel mondo reale. Evita le prediche morali per framework operativi. È scritto per CTO, Developer e Sustainability Lead che devono agire lunedì mattina.
                 </p>
-                <a href="https://leanpub.com/sustainable-it" target="_blank" class="inline-block px-8 py-4 bg-emerald-600 text-white font-bold rounded-lg shadow-lg hover:bg-emerald-700 hover:shadow-xl transition-all transform hover:-translate-y-1">
+                <a href="https://leanpub.com/sustainable-it" target="_blank" class="btn btn-primary">
                     Compra il libro su Leanpub
                 </a>
-                <p class="text-xs text-stone-400 mt-4">Disponibile in PDF, EPUB, MOBI</p>
+                <p style="font-size: 0.75rem; color: #A8A29E; margin-top: 1rem;">Disponibile in PDF, EPUB, MOBI</p>
             </div>
         </div>
     </section>
