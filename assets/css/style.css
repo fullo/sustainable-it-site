@@ -256,16 +256,28 @@ h1, h2, h3, h4 {
 .btn-nav {
   display: inline-flex;
   align-items: center;
-  background: var(--c-text);
-  color: var(--c-bg);
+  background: var(--c-accent);
+  color: white;
   padding: 0.45rem 1.1rem;
   border-radius: var(--r-full);
   font-size: 0.8rem;
   font-weight: 600;
-  transition: background 0.2s var(--ease);
+  transition: background 0.2s var(--ease), color 0.2s var(--ease);
   text-decoration: none;
 }
+.nav-links a.btn-nav { color: white; }
 .btn-nav:hover { background: var(--c-accent-dk); color: white; }
+.nav-links a.btn-nav:hover { color: white; }
+
+
+/* ============================================
+   SECTION CTA
+   ============================================ */
+
+.section-cta {
+  text-align: center;
+  margin-top: 3rem;
+}
 
 
 /* ============================================
