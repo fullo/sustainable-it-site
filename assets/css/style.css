@@ -507,6 +507,7 @@ h1, h2, h3, h4 {
 .hero-cover {
   display: flex;
   justify-content: center;
+  justify-self: center;
   animation: fadeUp 0.8s var(--ease) 0.15s both;
 }
 
